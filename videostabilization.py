@@ -6,6 +6,9 @@ import collections
 import argparse
 import datetime
 import time
+if len(sys.argv) != 4:
+	print('Proper use: python videostabilization.py video_file codec_code file_extension')
+	exit()
 cap = cv2.VideoCapture(str(sys.argv[1]))
 inputnamelist = sys.argv[1].split('.')
 outputname = str(inputnamelist[0]+'_output.'+str(sys.argv[3]))
